@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Verse - Loja de Manga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Manga.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Manga Verse</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li>
+                    <!-- Barra de pesquisa -->
+                    <input type="text" id="search-bar" placeholder="Pesquisar produtos..." oninput="filterProducts()">
+                </li>
+                <li>
+                    <!-- Ícone do carrinho -->
+                    <a href="javascript:void(0);" id="cart-btn">
+                        <img src="carrinho-de-compras (1).png" alt="Carrinho" id="cart-icon">
+                         (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+                <li>
+                    <!-- Botão para alternar o tema -->
+                    <button id="theme-toggle" onclick="toggleTheme()">☽</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Vagabond</h2>
+            <div class="product-list" id="product-list">
+                <!-- Produtos destacados -->
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/81AQnk9bGaL._AC_UF1000,1000_QL80_.jpg" alt="Produto 1">
+                    <h3>Vagabond Vol.1</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.1', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/91WX+eMJ2ZL._SL1500_.jpg" alt="Produto 2">
+                    <h3>Vagabond Vol.2</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.2', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/91KDm4kUI2L._SL1500_.jpg" alt="Produto 3">
+                    <h3>Vagabond Vol.3</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.3', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51JyN+R2u9L._SY445_SX342_.jpg" alt="Produto 4">
+                    <h3>Vagabond Vol.4</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.4', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_ne93gd7r3d7535m8l8h641qt29/-S897-FWEBP" alt="Produto 5">
+                    <h3>Vagabond Vol.5</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.5', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51dj4K51zHL._SY445_SX342_.jpg" alt="Produto 6">
+                    <h3>Vagabond Vol.6</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.6', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51PEOdDRalL._SY445_SX342_.jpg" alt="Produto 7">
+                    <h3>Vagabond Vol.7</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.7', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51f+D1DSEkL._SY445_SX342_.jpg" alt="Produto 8">
+                    <h3>Vagabond Vol.8</h3>
+                    <p>R$ 45,90</p>
+                    <button onclick="addToCart('Vagabond Vol.8', 45.90)">Adicionar ao Carrinho</button> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Itens no Carrinho</h2>
+            <ul id="cart-items-list">
+                <!-- Itens do carrinho serão listados aqui -->
+            </ul>
+            <div id="cart-total">
+                <strong>Total: R$ <span id="total-price">0.00</span></strong>
+            </div>
+            <button id="checkout-btn">Finalizar Compra</button>
+            <button id="close-cart-btn">Fechar</button>
+        </div>
+    </section>
+    <script src="script.Js"></script>
+</body>
+</html>

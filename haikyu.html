@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Verse - Loja de Manga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Manga.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Manga Verse</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li>
+                    <!-- Barra de pesquisa -->
+                    <input type="text" id="search-bar" placeholder="Pesquisar produtos..." oninput="filterProducts()">
+                </li>
+                <li>
+                    <!-- Ícone do carrinho -->
+                    <a href="javascript:void(0);" id="cart-btn">
+                        <img src="carrinho-de-compras (1).png" alt="Carrinho" id="cart-icon">
+                         (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+                <li>
+                    <!-- Botão para alternar o tema -->
+                    <button id="theme-toggle" onclick="toggleTheme()">☽</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Haikyu!</h2>
+            <div class="product-list" id="product-list">
+                <!-- Produtos destacados -->
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61AU5L7LvRL._SY466_.jpg" alt="Produto 1">
+                    <h3>Haikyu! Vol.1</h3>
+                    <p>R$ 74,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.1', 32.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/71xLyoYyiqL._SY466_.jpg" alt="Produto 2">
+                    <h3>Haikyu! Vol.2</h3>
+                    <p>R$ 32,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.2', 32.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/515v+bLZ7ZL._SY445_SX342_.jpg" alt="Produto 3">
+                    <h3>Haikyu! Vol.3</h3>
+                    <p>R$ 34,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.3', 34.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/515G2m8ZkYL._SY445_SX342_.jpg" alt="Produto 4">
+                    <h3>Haikyu! Vol.4</h3>
+                    <p>R$ 36,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.4', 36.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/518XMlOQ9BL._SY445_SX342_.jpg" alt="Produto 5">
+                    <h3>Haikyu! Vol.5</h3>
+                    <p>R$ 25,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.5', 25.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51qcm3lKxPL._SY445_SX342_.jpg" alt="Produto 6">
+                    <h3>Haikyu! Vol.6</h3>
+                    <p>R$ 27,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.6', 27.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51m1oA6j-aL._SY445_SX342_.jpg" alt="Produto 7">
+                    <h3>Haikyu! Vol.7</h3>
+                    <p>R$ 39,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.7', 39.90)">Adicionar ao Carrinho</button> 
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51PfIBRO11L._SY445_SX342_.jpg" alt="Produto 8">
+                    <h3>Haikyu! Vol.8</h3>
+                    <p>R$ 39,90</p>
+                    <button onclick="addToCart('Haikyu! Vol.8', 39.90)">Adicionar ao Carrinho</button> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Itens no Carrinho</h2>
+            <ul id="cart-items-list">
+                <!-- Itens do carrinho serão listados aqui -->
+            </ul>
+            <div id="cart-total">
+                <strong>Total: R$ <span id="total-price">0.00</span></strong>
+            </div>
+            <button id="checkout-btn">Finalizar Compra</button>
+            <button id="close-cart-btn">Fechar</button>
+        </div>
+    </section>
+    <script src="script.Js"></script>
+</body>
+</html>
+            </div>
+        </div>
+    </section>
+    <section id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Itens no Carrinho</h2>
+            <ul id="cart-items-list">
+                <!-- Itens do carrinho serão listados aqui -->
+            </ul>
+            <div id="cart-total">
+                <strong>Total: R$ <span id="total-price">0.00</span></strong>
+            </div>
+            <button id="checkout-btn">Finalizar Compra</button>
+            <button id="close-cart-btn">Fechar</button>
+        </div>
+    </section>
+    <script src="script.Js"></script>
+</body>
+</html>

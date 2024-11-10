@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Verse - Loja de Manga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Manga.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Manga Verse</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li>
+                    <!-- Barra de pesquisa -->
+                    <input type="text" id="search-bar" placeholder="Pesquisar produtos..." oninput="filterProducts()">
+                </li>
+                <li>
+                    <!-- Ícone do carrinho -->
+                    <a href="javascript:void(0);" id="cart-btn">
+                        <img src="carrinho-de-compras (1).png" alt="Carrinho" id="cart-icon">
+                         (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+                <li>
+                    <!-- Botão para alternar o tema -->
+                    <button id="theme-toggle" onclick="toggleTheme()">☽</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Hero/Home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <strong><h1>Bem-vindo à Manga Verse</h1></strong>
+            <p>Loja feita de fã para fã</p>
+            <button onclick="scrollToSection('#products')">Veja nossos produtos</button>
+        </div>
+    </section>
+
+    <!-- Seção Carrossel -->
+    <section id="carousel" class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <img src="O mangá de Berserk ganhará novos capítulos ainda neste ano. A publicação Young Animal confirmou que os fãs podem esperar a chegada dos capítulos 377 e 378 antes de dezembro. Segundo a revistam, o .png" alt="Berserk">
+            </div>
+            <div class="carousel-item">
+                <img src="one piece noticias.png" alt="one piece">
+            </div>
+            <div class="carousel-item">
+                <img src="DBZ.png" alt="Vinland Saga">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Produtos em Destaque</h2>
+            <div class="product-list" id="product-list">
+                <!-- Produtos destacados -->
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/81AQnk9bGaL._AC_UF1000,1000_QL80_.jpg" alt="Produto 1">
+                    <h3>Vagabond Vol.1</h3>
+                    <p>R$ 57,90</p>
+                    <button onclick="addToCart('Vagabond Vol.1', 57.90)">Adicionar ao Carrinho</button>
+                    <button><a href="vagabond.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/91+Qs9DaFZL._AC_UF894,1000_QL80_.jpg" alt="Produto 2">
+                    <h3>Vinland Saga Vol.1</h3>
+                    <p>R$ 59,90</p>
+                    <button onclick="addToCart('Vinland Saga Vol.1', 59.90)">Adicionar ao Carrinho</button>
+                    <button><a href="vinlandsaga.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61axXmHaqiL._AC_UF1000,1000_QL80_.jpg" alt="Produto 3">
+                    <h3>Berserk Vol.1</h3>
+                    <p>R$ 35,90</p>
+                    <button onclick="addToCart('Berserk Vol.1', 35.90)">Adicionar ao Carrinho</button>
+                    <button><a href="berserk.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/71t11qhOQVL._AC_UF1000,1000_QL80_.jpg" alt="Produto 4">
+                    <h3>Frieren Vol.1</h3>
+                    <p>R$ 39,90</p>
+                    <button onclick="addToCart('Frieren Vol.1', 39.90)">Adicionar ao Carrinho</button>
+                    <button><a href="frieren.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51t+BkN5sCL._SY445_SX342_.jpg" alt="Produto 5">
+                    <h3>Fullmetal Alchemist Vol.1</h3>
+                    <p>R$ 39,90</p>
+                    <button onclick="addToCart('Fullmetal Alchemist Vol.1', 39.90)">Adicionar ao Carrinho</button>
+                    <button><a href="Fullmetal.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/8125DI58M+L._AC_UF894,1000_QL80_.jpg" alt="Produto 6">
+                    <h3>Haikyu!! Vol.1</h3>
+                    <p>R$ 74,90</p>
+                    <button onclick="addToCart('Haikyu!! Vol.1', 74.90)">Adicionar ao Carrinho</button>
+                    <button><a href="haikyu.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/716EGgqzyOL._AC_UF1000,1000_QL80_.jpg" alt="Produto 7">
+                    <h3>One Piece Vol.1</h3>
+                    <p>R$ 39,90</p>
+                    <button onclick="addToCart('One Piece Vol.1', 39.90)">Adicionar ao Carrinho</button>
+                    <button><a href="onepiece.html" target="_blank">Ver detalhes</a></button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2022/10/neon-genesis-evangelion-collectors-edition-01-capa-770x1078.jpg" alt="Produto 8">
+                    <h3>Evangelion (Edition Collectors) Vol.1</h3>
+                    <p>R$ 74,90</p>
+                    <button onclick="addToCart('Evangelion Vol.1', 74.90)">Adicionar ao Carrinho</button>
+                    <button><a href="evangelion.html" target="_blank">Ver detalhes</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Carrinho (Modal) -->
+    <section id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Itens no Carrinho</h2>
+            <ul id="cart-items-list">
+                <!-- Itens do carrinho serão listados aqui -->
+            </ul>
+            <div id="cart-total">
+                <strong>Total: R$ <span id="total-price">0.00</span></strong>
+            </div>
+            <button id="checkout-btn">Finalizar Compra</button>
+            <button id="close-cart-btn">Fechar</button>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Manga Verse. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
